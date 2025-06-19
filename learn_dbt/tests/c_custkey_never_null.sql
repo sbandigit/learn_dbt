@@ -3,4 +3,4 @@ SELECT
 FROM 
  {{ref('assesment2')}}
 WHERE C_CUSTKEY IS NULL 
-HAVING count(1) <1
+HAVING count(1) > 1
