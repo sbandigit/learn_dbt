@@ -25,7 +25,7 @@ models:
           - relationships:
               field: id
               to: ref('my_first_dbt_model')
-  - name: first_fransformation
+  - name: first_transformation
     description: 'my first transformation'
     columns:
       - name: c_custkey
