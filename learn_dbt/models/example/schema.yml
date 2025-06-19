@@ -1,0 +1,43 @@
+
+version: 2
+
+models:
+  - name: my_first_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          #- not_null
+          # - accepted-values:
+          #     values: [1,2]
+          #     quote: false
+
+  - name: my_second_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          #- not_null
+          - relationships:
+              field: id
+              to: ref('my_first_dbt_model')
+  - name: first_fransformation
+    description: 'my first transformation'
+    columns:
+      - name: c_custkey
+        data_tests:
+          - unique
+          - not_null
+  - name: scond_transformation
+    description: 'my second transformation'
+    columns:
+      - name: C_CUSTKEY
+        data_tests:
+          - unique
+          - not_null
+  #- name: dates
+  - name: unit_testing_model

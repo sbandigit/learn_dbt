@@ -1,0 +1,13 @@
+{{config(materialized='table',alias='testing_sample')}}
+
+with source as (
+    select 1 as id, 
+    'test' as user
+
+    union all
+    select 2 as id , 'test1' as user
+)
+select 
+ *
+from 
+ source
