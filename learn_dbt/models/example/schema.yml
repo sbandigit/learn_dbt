@@ -3,7 +3,7 @@ version: 2
 
 models:
   - name: my_first_dbt_model
-    description: "A starter dbt model"
+    description: "First dbt model"
     columns:
       - name: id
         description: "The primary key for this table"
@@ -15,7 +15,7 @@ models:
           #     quote: false
 
   - name: my_second_dbt_model
-    description: "A starter dbt model"
+    description: "Second dbt model"
     columns:
       - name: id
         description: "The primary key for this table"
