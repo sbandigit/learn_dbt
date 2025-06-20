@@ -1,3 +1,5 @@
+{{config(materialized='test',alias='test_sumofsales')}}
+
 SELECT
  SUM(c_acctbal) as sum_sales
 from 

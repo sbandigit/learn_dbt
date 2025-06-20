@@ -1,5 +1,5 @@
-{{config(materialized = 'table')}}
+{{config(materialized = 'table',alias='second_transformation')}}
 select 
  *
 from 
- {{ref('first_transformation')}}
+ {{ref('my_first_dbt_model')}}

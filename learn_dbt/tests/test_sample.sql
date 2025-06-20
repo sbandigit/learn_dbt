@@ -1,4 +1,4 @@
-{{config(materialized='table',alias='testing_sample')}}
+{{config(materialized='test',alias='sample_test')}}
 
 with source as (
     select 1 as id, 

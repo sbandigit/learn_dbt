@@ -40,4 +40,4 @@ models:
           - unique
           - not_null
   #- name: dates
-  - name: unit_testing_model
+  #- name: unit_testing_model

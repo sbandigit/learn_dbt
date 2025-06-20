@@ -25,6 +25,11 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
 
+# Hooks - whole project level
+# on-run-end: 
+#   - 'grant usage on schema dbt_db.dbt_schema to role analyst'
+#   - 'grant select on all tables in schema dbt_db.dbt_schema to role analyst'
+#   - 'grant select on all views in schema dbt_db.dbt_schema to role analyst'
 
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
@@ -32,8 +37,18 @@ clean-targets:         # directories to be removed by `dbt clean`
 # In this example config, we tell dbt to build all models in the example/
 # directory as views. These settings can be overridden in the individual model
 # files using the `{{ config(...) }}` macro.
+
 models:
   learn_dbt:
     # Config indicated by + and applies to all files under models/example/
     example:
       +materialized: view
+      # vars:
+      #   var1: 450
+      #   var2: 20
+      #   var3: 23
+      #post-hook: ['grant usage on schema {{target.this}} to role analyst','grant select on {{this}} to role analyst']
+      
+
+
+    

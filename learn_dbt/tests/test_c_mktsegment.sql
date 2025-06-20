@@ -1,4 +1,4 @@
---{{config(materialized='test', alias='test_mktsegment')}}
+{{config(materialized='test', alias='test_mktsegment')}}
 SELECT
  count(*) as records_count
 FROM
