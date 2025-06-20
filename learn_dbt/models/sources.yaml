@@ -1,0 +1,11 @@
+sources:
+  - name: DEV
+    description:  this demo dbt db
+    database: SNOWFLAKE_SAMPLE_DATA
+    schema: TPCH_SF1
+    tables:
+      - name: CUSTOMER
+        description: one record per customer
+      - name: ORDERS
+        description: more thans one order per customer
+      

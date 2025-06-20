@@ -1,3 +1,5 @@
+{{config(materialized='test',alias='not_null_test')}}
+
 SELECT 
  count(*)
 FROM 

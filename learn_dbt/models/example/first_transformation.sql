@@ -1,4 +1,4 @@
-{{ config(materialized = 'view')}}
+{{ config(materialized = 'table',alias='total_sales_per_customer')}}
 
 SELECT 
  C.C_CUSTKEY,
