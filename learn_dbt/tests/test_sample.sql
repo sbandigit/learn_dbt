@@ -5,7 +5,9 @@ with source as (
     'test' as user
 
     union all
-    select 2 as id , 'test1' as user
+    
+    select 2 as id ,
+    'test1' as user
 )
 select 
  *
