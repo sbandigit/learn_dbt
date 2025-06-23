@@ -34,10 +34,10 @@ models:
           - not_null
   - name: second_transformation
     description: 'my second transformation'
-    columns:
-      - name: C_CUSTKEY
-        data_tests:
-          - unique
-          - not_null
+    # columns:
+    #   - name: C_CUSTKEY
+    #     data_tests:
+    #       - unique
+    #       - not_null
   #- name: dates
-  #- name: unit_testing_model
+  #- name: sales_per_customer

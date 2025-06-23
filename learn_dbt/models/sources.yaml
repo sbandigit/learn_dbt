@@ -1,11 +1,32 @@
 sources:
   - name: DEV
-    description:  this demo dbt db
+    description:  demo
     database: SNOWFLAKE_SAMPLE_DATA
     schema: TPCH_SF1
     tables:
       - name: CUSTOMER
         description: one record per customer
+        columns:
+          - name: c_custkey
+            tests:
+              - unique
+              - not_null
       - name: ORDERS
         description: more thans one order per customer
+        columns:
+          - name: O_ORDERKEY
+            tests:
+              - unique
+              - not_null
+            # data_tests:
+            #   - relationships:
+            #       field: c_custkey
+            #       to: ref('CUSTOMER')
+
+  - name: STG
+    description: STG tables
+    database: DBT_DB
+    schema: DBT_SCHEMA
+    tables:
+      - name: FIRST_MODEL
       

@@ -2,3 +2,9 @@ version: 2
 models:
   - name: stg_customers
   - name: stg_orders
+    description: 'new yaml file samples'
+    columns:
+      - name: O_ORDERKEY
+        tests:
+          - unique
+          - not_null
