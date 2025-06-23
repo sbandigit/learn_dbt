@@ -30,16 +30,15 @@ sources:
     schema: DBT_SCHEMA
     tables:
       - name: FIRST_MODEL
-
-
+      
   - name: SF10TCL
     description: TPCDS_SF10TCL
     database: SNOWFLAKE_SAMPLE_DATA
     schema: TPCDS_SF10TCL
     tables:
-      - name: date_dim
+      - name: DATE_DIM
         columns:
-          - name: d_date
+          - name: D_DATE
             tests:
               - unique
               - not_null
