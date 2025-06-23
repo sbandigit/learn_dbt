@@ -3,7 +3,7 @@
 SELECT 
  *
 FROM 
- {{source("SF10TCL","date_dim")}}
+ {{source('SF10TCL','DATE_DIM')}}
 where d_date <= current_date 
 
 {% if is_incremental() %}
