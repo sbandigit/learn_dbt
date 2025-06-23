@@ -1,3 +1,8 @@
+/*
+
+ this is sample incremental model..
+ */
+
 {{config(materialized='incremental', unique_key="d_date",alias="date_dim_new")}}
 
 SELECT 
