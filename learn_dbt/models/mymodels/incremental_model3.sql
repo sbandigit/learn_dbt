@@ -1,4 +1,4 @@
-{{config(materialized='incremental', unique_key='d_date',alias='date_dim_new')}}
+{{config(materialized='incremental', unique_key='d_date',alias='date_dim_new3')}}
 
 SELECT
  *
