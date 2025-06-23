@@ -4,7 +4,7 @@
 SELECT 
  *
 FROM 
- "SNOWFLAKE_SAMPLE_DATA"."TPCDS_SF10TCL"."DATE_DIM"
+ {{source('SF10TCL','date_dim')}}
 WHERE D_DATE <= current_date
 
 {% if is_incremental() %}
